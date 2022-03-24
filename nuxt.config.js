@@ -1,3 +1,5 @@
+import auth from "./middleware/auth";
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -32,6 +34,11 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
+
+  router: {
+    //use below when ALL routes are private, otherwise u shoud config each private file instead
+    //middleware: auth
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
